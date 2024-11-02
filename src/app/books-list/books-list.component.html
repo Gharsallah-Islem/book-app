@@ -15,7 +15,6 @@
             <th scope="col">Prix</th>
             <th scope="col">Editer</th>
             <th scope="col">Supprimer</th>
-
         </tr>
     </thead>
     <tbody>
@@ -26,7 +25,7 @@
             <td>{{book.author}}</td>
             <td>{{book.price}}</td>
             <td><button class="btn btn-primary" (click)="changeAction('edit', book)">Editer</button></td>
-            <td><button class="btn btn-danger">Supprimer</button></td>
+            <td><button class="btn btn-danger" (click)="deleteBook(book.id)">Supprimer</button></td>
         </tr>}
     </tbody>
 </table>

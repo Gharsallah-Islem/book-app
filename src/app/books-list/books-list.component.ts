@@ -36,4 +36,8 @@ export class BooksListComponent {
     this.books = this.books.map(book => book.id === updatedBook.id ? updatedBook : book);
     this.changeAction("");
   }
+
+  deleteBook(bookId: number) {
+    this.books = this.books.filter(book => book.id !== bookId);
+  }
 }
